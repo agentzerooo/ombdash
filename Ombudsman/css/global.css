@@ -1,0 +1,108 @@
+html, body{
+
+	font-family:'Open Sans','Helvetica Neue', Arial, Helvetica, sans-serif;	
+	background: #f3f3f4;
+	color: #676a6c;
+	height: 100%;
+}
+
+.box {
+	border: 1px solid red;
+}
+
+#header-search{
+
+	border: 0;
+	outline: none;
+	padding-top: 15px;
+	vertical-align: center;
+	width: 300px;
+
+}
+
+#navigation-menu{
+
+	background: #2f4050;
+	padding: 0px;
+}
+#navigation-menu h3{
+	color: #1f3647;
+	font-size: 1em;
+	text-align: center;
+	margin: 10px 0;
+
+}
+
+#nav-header{
+
+	background: #fff;
+	border-bottom: 1px solid #e7eaec;
+
+}
+
+#nav-header ul{
+
+	margin:0;
+	padding: 0;
+	list-style: none;
+	color: #676a6c;
+
+}
+
+#nav-header ul li{
+
+	float: left;
+	margin-left: 15px;
+	padding: 15px 0;
+
+}
+
+#nav-header ul .glyphicon, #nav-header ul .fa{
+
+	color: #676a6c;
+	
+
+}
+
+#nav-header ul li a{
+
+	text-decoration: none;
+
+}
+
+.display-table {
+
+	display: table;
+	height: 100%;
+	padding: 0;
+	
+}
+
+.display-table-row { 
+	display: table-row;
+	height: 100%;
+
+}
+.display-table-cell{
+	display: table-cell;
+	float: none;
+	height: 100%;
+}
+
+#nav-header #username{
+
+	margin-right: 20px;
+
+}
+.vertical-align{
+
+	vertical-align: top;
+}
+.label-message{
+
+		background: #333;
+}
+.label-warning{
+
+	
+}
