@@ -1,0 +1,70 @@
+.navbar{
+	background: #CF000f!important;
+}
+
+.datepicker table tr td.active:active, 
+.datepicker table tr td.active.highlighted:active, 
+.datepicker table tr td.active.active, 
+.datepicker table tr td.active.highlighted.active {
+  color: #000;
+  background-color: #eee;
+  
+}
+.datepicker table tr td.today:active, .datepicker table tr td.today.active {
+    color: #000;
+    background-color: #d6d6d6!important;
+    
+}
+.datepicker table tr td.today:hover {
+    color: #000;
+    background-color: #d6d6d6;
+}
+
+.datepicker table tr td.today,
+.datepicker table tr td.today:active:hover, 
+.datepicker table tr td.today.highlighted:active:hover, 
+.datepicker table tr td.today.active:hover, 
+.datepicker table tr td.today.highlighted.active:hover, 
+.datepicker table tr td.today:active:focus, 
+.datepicker table tr td.today.highlighted:active:focus, 
+.datepicker table tr td.today.active:focus, 
+.datepicker table tr td.today.highlighted.active:focus, 
+.datepicker table tr td.today:active.focus, 
+.datepicker table tr td.today.highlighted:active.focus, 
+.datepicker table tr td.today.active.focus, 
+.datepicker table tr td.today.highlighted.active.focus{
+	background: #cf000f;
+	color: #fff;	
+}
+
+.datepicker table tr td.active:active:hover, 
+.datepicker table tr td.active.highlighted:active:hover, 
+.datepicker table tr td.active.active:hover, 
+.datepicker table tr td.active.highlighted.active:hover, 
+.datepicker table tr td.active:active:focus, 
+.datepicker table tr td.active.highlighted:active:focus, 
+.datepicker table tr td.active.active:focus, 
+.datepicker table tr td.active.highlighted.active:focus, 
+.datepicker table tr td.active:active.focus, 
+.datepicker table tr td.active.highlighted:active.focus, 
+.datepicker table tr td.active.active.focus, 
+.datepicker table tr td.active.highlighted.active.focus {
+  background-color:#d6d6d6;
+  color: #000;
+  text-shadow: none;
+ ;
+}
+
+.datepicker tfoot tr th {
+    
+    color: #fff;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background: #CF000f;
+}
+
+
+
+

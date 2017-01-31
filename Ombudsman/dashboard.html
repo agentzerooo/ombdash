@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge chrome">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Collapse content</title>
+
+  <!--stylesheets-->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="js/bootstrap-datepicker/css/restyle.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="js/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+  <link href="bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!--javascript-->
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script src="js/bootstrap-datepicker/js/datepicker-edits.js"></script>
+  <!--jquery for masks-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+  <!--jquery for charts-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  
+<!--phone mask-->
+  <script>
+$(document).ready(function($){
+
+		$('#phone').mask("(999) 999-9999", {placeholder: "(___) ___-____"});
+		$('.datepicker').datepicker();
+	});
+
+</script>
+
+</head>
+<body>
+
+<style type="text/css">
+	body{
+		padding: 0;
+		background: #f8f8f8;
+	}
+	
+	.calendar-input-wrapper {
+
+		border:1px solid #aeb2b4;
+		border-radius: 4px;
+		color: #474747;
+		font-family: 'Helvetica','Arial', sans-serif;
+		font-size: 1em;
+		font-weight: normal;
+		outline:none;
+		padding: 6px;
+		width:9.2em;
+	}
+
+	.tester{
+
+		border:1px solid #444;
+		border-radius: 4px;
+		padding: 5px 8px;
+		color: #333;
+
+	}
+	.tester:hover{
+		color: #333;
+		text-decoration: none;
+	}
+	.clear-input{
+		border: 0;
+		outline:none;
+	}
+	.calendar{
+		font-size: 1.3em;
+		border-left: 1px;
+		cursor: pointer;
+	}
+	.calendar-position{
+		margin-top: 5px;
+		position: relative;
+	}
+	.box{
+		
+		outline: none;
+		text-align: center;
+		
+		
+		
+	}
+	.row-container{
+		width: 90%;
+		margin: auto;
+		padding: 1em;
+		
+	}
+	.count-label{
+
+		font-size: 1em;
+		text-transform: uppercase;
+		color: gray;
+	}
+	.case-count{
+		padding: 0;
+		color: #444;
+		font-family: 'Helvetica', Arial, sans-serif;
+		font-size: 2.5em;
+	}
+	.cat-header{
+		background: #eee;
+		color: #838383;
+		width: 100%;
+		padding:.7em 1em;
+		border-radius: 4px 4px 0 0;
+		border-bottom: 1px solid #d4d4d4;
+		font-weight: bold;
+		text-transform: uppercase;
+		}
+	.cat-icon{
+		font-size: 1.3em;
+		color: #cf000f;
+		margin-bottom:5px;
+		border: 1px solid #cf000f;
+		border-radius: 100%;
+		padding: 10px;
+	}
+	 .cat-wrapper table{
+		width: 100%;
+		color: #444;
+		
+
+	}
+	table tr{
+		border-collapse: collapse;
+		border-bottom: 1px solid#eee;
+	}
+
+	table tr:last-child{
+
+		border-bottom: none;
+	}
+	table td{
+		padding: .5em 0; 
+	}
+	.cat-wrapper{
+		background: #fff;
+		border: 1px solid #d4d4d4;
+		border-radius: 3px 3px 0 0;
+
+			}
+
+	.table-format{
+		display: table;
+	}
+
+	.body-wrapper{
+		padding: 1.5em;
+		background: ;
+	}
+
+	.navbar{
+		background: #cf000f;
+		border-radius: 0!important;
+		box-shadow: 0 2px 3px #d4d4d4;
+		padding: 0 1em;
+	}
+	.brand {
+		color: #fff;
+		font-size: 2em;
+	}
+	h2{
+		margin:0;
+	}
+
+	#nav-header{
+		background: none;
+	}
+	.row{
+		background: none;
+	}
+	.formatter{
+		padding: .5em;
+		margin: auto;
+	}
+
+
+
+.no-gutter{
+    padding-right:0!important;
+    padding-left:0!important;
+    background: green!important;
+}
+
+
+
+@media only screen  and (max-width : 764px) {
+
+
+	.col-sm-3 {
+		padding: 3% 0;
+		margin: auto;
+		border-bottom: 1px solid #eee;
+		width: 200px;
+	}
+	.col-sm-3:last-child{
+		padding-bottom: 1%;
+		border-bottom: 0;
+	}
+	.row{
+		
+	}
+	.second-format{
+		margin-right:100px;
+		width: 95%;
+	}
+}
+@media only screen  and (min-width : 764px){
+	.cat-wrapper{
+		width: 80%;
+		margin: auto;
+	}
+
+	.sub-cat{
+		margin-bottom: 1%;
+	}
+}
+
+@media only screen  and (max-width : 800px){
+	
+	.sub-cat{
+		width: 100%!important;
+		margin-bottom: 1%;
+}
+	}
+}
+</style>
+
+<!--<div class="navbar">
+<div class="row"><div class="col-sm-2"><h3>OHCOBR</h3>
+&nbsp;&nbsp;</div>
+
+<div class="col-sm-6"><input type="text"><div class="btn-group">
+  <button type="button" class="btn btn-danger">Search</button>
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Last Name</a></li>
+    <li><a href="#">First Name</a></li>
+    <li><a href="#">Record Number</a></li>
+    <li><a href="#">Representative</a></li>
+    <!--<li role="separator" class="divider"></li>
+    
+  </ul>
+</div>
+</div><i class="fa fa-user" class="pull-right">Jane Doe</i>
+</div>-->
+
+
+        <div> <div class="navbar vertical-align">
+         <div class="row">
+            <header id="nav-header" class="clearfix">
+	              <div class="col-md-9" style="display: inline-block;"><div class="vertical-align">
+	              <div class="col-md-9"><span class="brand">OHCOBR</span> <input type="text"><div class="btn-group">
+				  <button type="button" class="btn btn-danger">Search</button>
+				  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="caret"></span>
+				    <span class="sr-only"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">Last Name</a></li>
+				    <li><a href="#">First Name</a></li>
+				    <li><a href="#">Record Number</a></li>
+				    <li><a href="#">Representative</a></li>
+				    <li role="separator" class="divider"></li>
+				    
+				  </ul>
+	</div></div></div></div>
+              <div class="col-md-3">
+                <ul class="pull-right">
+                  <li id="username" class="animated fadeIn"><i class="glyphicon glyphicon-user" style="color: #94000b; font-size: 1.3em; top: 3px;"></i> &nbsp;Lisa Jones</li>
+                  <!--<li class="fixed-width">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                    <span class="label label-warning label-warning-red" aria-hidden="true">3</span>
+                  </a>
+                  </li>
+
+                  <li class="fixed-width">
+                  <a href="#">
+                    <span class="fa fa-folder" aria-hidden="true"></span>
+                    <span class="label label-warning label-message" aria-hidden="true">3</span>
+                  </a>
+                  </li>-->
+                </ul>
+              </div>
+            </header>
+          </div></div></div></div>
+
+<!-- RIGHT CONTENT -->
+<div class="body-wrapper">
+	<div class="container-fluid">
+		<div class="cat-wrapper">
+		<div class="cat-header clear-fix" style="text-align: center;">Overview</div>
+			<div class="row-container">
+				<div class="row">
+				  <div class="col-sm-3 box">
+				  <i class="fa fa-archive cat-icon"></i><br>
+				  <label class="count-label">YTD</label><br>
+				  <h2 class="case-count">3453</h2></div>
+
+				    <div class="col-sm-3 box">
+				    <i class="fa fa-check-square-o cat-icon"></i><br>
+					  <label class="count-label">CLOSED</label>
+					  <h2 class="case-count">3000</h2>
+					</div>
+
+				    <div class="col-sm-3 box">
+				    <i class="fa fa-hourglass-half  cat-icon"></i><br>
+					  <label class="count-label">OPEN</label>
+					  <h2 class="case-count">453</h2>
+				  	</div>
+
+				     <div class="col-sm-3 box">
+					    <i class="fa fa-calendar-o  cat-icon"></i><br>
+					  <label class="count-label">CURRENT MONTH</label>
+					  <h2 class="case-count">43</h2>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="container">
+		<div class="row" style="margin: auto;">
+		<div class="col-lg-4 sub-cat" style="margin:0;">
+			<div class="cat-wrapper  second-format">
+				<div class="cat-header ">Previous Months
+				</div>
+				<div class="container formatter clearfix table-format" style="width: 90%;">
+					<table>
+					<tr>
+						<td>Total </td>
+						<td>47</td>
+					</tr>
+					<tr>
+						<td>Opened</td>
+						<td>47</td>
+					</tr>
+
+					<tr>
+						<td>Closed Cases</td>
+						<td>47</td>
+					</tr>
+					</table>
+				</div>
+			</div>	
+		</div>
+		<div class="col-lg-4 sub-cat">
+			<div class="cat-wrapper  second-format">
+				<div class="cat-header clearfix">test
+				</div>
+				<div class="container formatter">Lorem Ipsum</div>
+			</div>	
+		</div>
+		<div class="col-lg-4 sub-cat">
+			<div class="cat-wrapper">
+				<div class="cat-header clearfix">test
+				</div>
+				<div class="container formatter">Lorem Ipsum</div>
+			</div>	
+		</div>
+		</div>
+		</div>
+	</div>
+
+
+<div class="container">
+  <h2>Simple Collapsible</h2>
+  <p>Click on the button to toggle between showing and hiding content.</p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+<div class="calendar-input-wrapper">
+	<input id="date" type="" class="box" size="10" name="" class="clear-input"/> 
+		<label class="pull-right" for="date" class="calendar-position">
+			<span for="date" class="calendar glyphicon glyphicon-calendar" style="top: 2px; margin-right:4px;"></span>
+		</label>
+</div>
+<br>
+
+<div class="input-group date" data-provide="datepicker" style="width: 11em;">
+    <input type="text" class="form-control" >
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+    </div>
+</div>
+<script src="js/charts-script.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+</body>
+</html>

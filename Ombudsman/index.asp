@@ -143,7 +143,18 @@
     
 
   }
- 
+  table tr{
+    border-collapse: collapse;
+    border-bottom: 1px solid#eee;
+  }
+
+  table tr:last-child{
+
+    border-bottom: none;
+  }
+  table td{
+    padding: .5em 0; 
+  }
   .cat-wrapper{
     background: #fff;
     border: 1px solid #d4d4d4;
@@ -286,7 +297,7 @@ x
            
          <ul class="nav-sub-menu list-unstyled">
          <div style="">
-            <li class="link current">
+            <li class="link">
                 <a href="index.html"> 
                     <span class="fa fa fa-tachometer nav-icon" aria-hidden="true"></span>
                     <span>Home</span>
@@ -327,13 +338,6 @@ x
                   </a>
                   </li>
                 </ul>
-            </li>
-
-              <li class="link">
-                <a href="forms.html"> 
-                    <span class="fa fa-file-text-o nav-icon" aria-hidden="true"></span>
-                    <span>Forms</span>
-                </a>
             </li>
 
               <li class="link">
